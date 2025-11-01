@@ -24,10 +24,10 @@ USE_SUPABASE = os.getenv("USE_SUPABASE", "false").lower() == "true"
 
 if USE_SUPABASE:
     print("🔄 Using Supabase database...")
-    import database_supabase as database
+    import database_supabase as database  # type: ignore
 else:
     print("🔄 Using SQLite database...")
-    import database  # Local SQLite database for user management
+    import database  # type: ignore # Local SQLite database for user management
     # Initialize SQLite database
     database.init_db()
 

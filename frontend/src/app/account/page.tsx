@@ -265,6 +265,23 @@ export default function AccountPage() {
                       <p className="font-medium">{userData.isPremium ? 'Unlimited' : userData.credits}</p>
                     </div>
                   </div>
+                  {userData.isPremium && userData.premiumExpiresAt && (
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-lg md:col-span-2">
+                      <Crown className="h-5 w-5 text-yellow-500" />
+                      <div>
+                        <p className="text-sm text-muted-foreground">Premium Valid Until</p>
+                        <p className="font-medium text-yellow-600 dark:text-yellow-400">
+                          {new Date(userData.premiumExpiresAt).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -296,6 +313,15 @@ export default function AccountPage() {
                         <div>
                           <h3 className="text-xl font-bold">Premium Member</h3>
                           <p className="text-sm text-muted-foreground">Unlimited access to all features</p>
+                          {userData.premiumExpiresAt && (
+                            <p className="text-xs text-muted-foreground mt-1">
+                              Expires on {new Date(userData.premiumExpiresAt).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                              })}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <div className="grid sm:grid-cols-2 gap-3">

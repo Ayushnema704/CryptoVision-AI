@@ -11,6 +11,7 @@ interface UserData {
   credits: number;
   isPremium: boolean;
   createdAt: string;
+  premiumExpiresAt?: string;
 }
 
 interface AuthContextType {
@@ -59,6 +60,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           credits: data.user.credits,
           isPremium: data.user.isPremium,
           createdAt: data.user.createdAt,
+          premiumExpiresAt: data.user.premiumExpiresAt,
         });
       } else {
         // Create new user if doesn't exist
@@ -79,6 +81,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
             credits: createData.user.credits,
             isPremium: createData.user.isPremium,
             createdAt: createData.user.createdAt,
+            premiumExpiresAt: createData.user.premiumExpiresAt,
           });
         }
       }
@@ -91,6 +94,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         credits: FREE_USER_CREDITS,
         isPremium: false,
         createdAt: new Date().toISOString(),
+        premiumExpiresAt: undefined,
       });
     }
   };

@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "neural-network-bg",
+      "description": "A visualization of a neural network with glowing nodes and connections, on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1637715863105-83fe44b5992f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTQ1Mjg1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    }
+  ]
+}

@@ -9,17 +9,11 @@ An advanced cryptocurrency price prediction system powered by LSTM (Long Short-T
 ![Supabase](https://img.shields.io/badge/Supabase-Auth-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## ⚠️ IMPORTANT: Authentication Setup Required
-
-This project uses **Supabase** for authentication. You **MUST** set up Supabase before running the app.
-
-👉 **See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for detailed instructions**
-
 ## ✨ Features
 
 - **🧠 Deep Learning**: LSTM neural networks trained on millions of historical data points
 - **📊 Real-Time Data**: Fetches live cryptocurrency prices from Yahoo Finance
-- **🔮 Future Forecasts**: Predict prices up to 100 days ahead
+- **🔮 Future Forecasts**: Predict prices up to 30 days ahead
 - **📈 Visual Analytics**: Interactive charts showing historical trends and predictions
 - **📉 Model Metrics**: MSE and RMSE metrics for model performance evaluation
 - **🎨 Modern UI**: Beautiful, responsive dark-themed interface built with Next.js

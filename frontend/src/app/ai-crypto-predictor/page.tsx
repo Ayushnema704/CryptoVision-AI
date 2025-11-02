@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -57,7 +57,7 @@ const cryptoInfo: Record<string, { name: string; color: string; gradient: string
   'DOGE-USD': { name: 'Dogecoin', color: '#C2A633', gradient: 'from-yellow-600 to-amber-600' },
 };
 
-export default function AICryptoPredictorPage() {
+function AICryptoPredictorPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -1052,5 +1052,17 @@ export default function AICryptoPredictorPage() {
       <AuthDialog open={authDialogOpen} onOpenChange={setAuthDialogOpen} />
       <CryptoPredictionDialog open={predictionDialogOpen} onOpenChange={setPredictionDialogOpen} />
     </div>
+  );
+}
+
+export default function AICryptoPredictorPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex items-center justify-center">
+        <Loader className="h-8 w-8 animate-spin text-white" />
+      </div>
+    }>
+      <AICryptoPredictorPageContent />
+    </Suspense>
   );
 }

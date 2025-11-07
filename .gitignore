@@ -23,7 +23,6 @@ build/
 *.sqlite
 *.sqlite3
 users.db
-database_supabase.py
 supabase_schema.sql
 
 # ML Models

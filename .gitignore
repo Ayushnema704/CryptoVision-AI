@@ -26,8 +26,8 @@ users.db
 supabase_schema.sql
 
 # ML Models
-model.h5
-model.keras
+# model.h5
+# model.keras
 
 # Node.js / Next.js
 node_modules/

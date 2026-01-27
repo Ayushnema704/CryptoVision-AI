@@ -9,6 +9,11 @@ An advanced cryptocurrency price prediction system powered by LSTM (Long Short-T
 ![Supabase](https://img.shields.io/badge/Supabase-Auth-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+# Demo Video
+
+https://github.com/user-attachments/assets/34e48426-3d42-46eb-bb8c-f00682c0acc0
+
+
 ## ✨ Features
 
 - **🧠 Deep Learning**: LSTM neural networks trained on millions of historical data points
